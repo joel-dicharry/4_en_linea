@@ -1,0 +1,70 @@
+body {
+    background-color: #bbb;
+}
+
+
+.zona-juego {
+    display:flex;
+    justify-content: center;
+    margin: 5px 0 0 0;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono {    
+    position: relative;
+    right: 42.5%;
+}
+.icono-img {
+    width: 200px;
+    padding: 5px 0;
+}
+
+canvas {
+    border: 5px solid transparent;
+    /* border-image: linear-gradient(45deg, blue, red , yellow , green ) 1; */
+    border-image: linear-gradient(135deg, red, orange, yellow , green, cyan, navy, purple) 1;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.winner {
+    background: rgba(230,230,230,.95);
+    width: 450px;
+    height: 400px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 8px rgba(0,0,0,.4);
+}
+.winner-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.winner-info p {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 160px;
+    margin-left: 40px;
+}
+.winner .playnow {
+    margin-top: 90px;
+    margin-left: 160px;
+}
+
+.active {
+    visibility: visible;
+}
