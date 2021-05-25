@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let winnerWindow = document.querySelector('.overlay');
     let btnClose = document.querySelector('.close');
     let text = document.querySelector('.winner-text');
-    let btnReset = document.querySelector('.playnow');
+    let btnPlayNow = document.querySelector('.playnow');
+    let btnReset = document.querySelector('.reset');
     
     function showWinner(winner) {
-        // TODO
         let txt = `¡Ganó ${winner.name}!`;
 
         text.innerHTML = txt;
@@ -33,12 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
         winnerWindow.classList.add('active')
     }
 
-    btnClose.addEventListener('click', () =>  winnerWindow.classList.remove('active'));
-    btnReset.addEventListener('click', () =>  {
+    const reset = () => {
         winnerWindow.classList.remove('active');
         game.reset();
         canvas.addEventListener('mousedown', mDown);
-    });
+    }
+
+    btnClose.addEventListener('click', () =>  winnerWindow.classList.remove('active'));
+    btnPlayNow.addEventListener('click', () => reset() );
+    btnReset.addEventListener('click', () => reset() );
+
+   
 
     // debugger;
     game.draw();

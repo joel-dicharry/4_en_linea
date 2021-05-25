@@ -265,6 +265,8 @@ class Game {
         this.changedchipsG2 = false;
         this.radiusChanged = false;
         this.timer = this.shiftTime;
+        
+        clearInterval(this.shiftControl);
         this.shiftControl = setInterval(() => {
                                 if(this.timer < 0) {
                                     this.changeTurn();
